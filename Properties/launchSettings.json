@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "sk-plugin-sample-101": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:52550;http://localhost:52551"
+    }
+  }
+}
