@@ -9,10 +9,7 @@ using System.Text.Json;
 var builder = Kernel.CreateBuilder();
 builder.Services.AddOpenAIChatCompletion("qwen-max", "sk-xxxxxx");
 builder.Services.ConfigureHttpClientDefaults(b =>
-{
-    b.ConfigurePrimaryHttpMessageHandler(() => new BypassHandler());
-    b.Services.Configure<JsonSerializerOptions>(options => options.WriteIndented = true);
-});
+    b.ConfigurePrimaryHttpMessageHandler(() => new BypassHandler()));
 builder.Plugins.AddFromType<LightPlugin>();
 Kernel kernel = builder.Build();
 
